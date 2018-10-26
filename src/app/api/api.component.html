@@ -1,0 +1,27 @@
+<h1>Taking a random picture from the randomusers.com api</h1>
+
+
+<h2>Featured user:</h2>
+<img src={{showData[88].picture.large}}/>
+<div>
+	<p>{{showData[88].name.first}} {{showData[88].name.last}}</p>
+</div>
+
+<table class="table">
+	<th>#</th>
+	<th>First Name</th>
+	<th>Last Name</th>
+	<th>E-mail</th>
+	<th>Phone number</th>
+
+	<tr *ngFor='let eachItem of showData; index as i'>
+		<td>{{i+1}}</td>
+		<td>{{eachItem.name.first}}</td>
+		<td>{{eachItem.name.last}}</td>
+		<td>{{eachItem.email}}</td>
+		<td>{{eachItem.phone}}</td>
+		<td><img src={{eachItem.picture.thumbnail}}/></td>
+		
+
+	</tr>
+</table>
