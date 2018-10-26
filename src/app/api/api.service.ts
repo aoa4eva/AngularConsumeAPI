@@ -14,9 +14,6 @@ export class ApiService {
 
   getInfo(showData){
   	console.log(this.apiURL+" is what is being called");
-  	//this.http.get(this.apiURL).subscribe((data){showData=data; console.log(showData)});
-  	//return this.http.get(this.apiURL).map(data=>{data.results.json()}); 
-  	//return this.http.get(this.apiURL);
   	return this.http.get(this.apiURL);
   	
 

@@ -1,11 +1,9 @@
-<h1>Taking a random picture from the randomusers.com api</h1>
-
-
-<h2>Featured user:</h2>
-<img src={{showData[88].picture.large}}/>
-<div>
-	<p>{{showData[88].name.first}} {{showData[88].name.last}}</p>
-</div>
+<h1 class="text-center">Taking a random picture from the randomusers.com api</h1>
+	<div class="text-center">
+		<h2>Featured user:</h2>
+		<img class="rounded" src={{showData[88].picture.large}}/>
+		<p><span class="text-capitalize">{{showData[88].name.first}}</span><span class="text-capitalize"> {{showData[88].name.last}}</span></p>
+	</div>
 
 <table class="table">
 	<th>#</th>
@@ -13,15 +11,14 @@
 	<th>Last Name</th>
 	<th>E-mail</th>
 	<th>Phone number</th>
+	<th></th>
 
 	<tr *ngFor='let eachItem of showData; index as i'>
 		<td>{{i+1}}</td>
-		<td>{{eachItem.name.first}}</td>
-		<td>{{eachItem.name.last}}</td>
+		<td class="text-capitalize">{{eachItem.name.first}}</td>
+		<td class="text-capitalize">{{eachItem.name.last}}</td>
 		<td>{{eachItem.email}}</td>
 		<td>{{eachItem.phone}}</td>
-		<td><img src={{eachItem.picture.thumbnail}}/></td>
-		
-
+		<td><img class="rounded" src={{eachItem.picture.thumbnail}}/></td>
 	</tr>
 </table>

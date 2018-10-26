@@ -16,7 +16,6 @@ export class ApiComponent implements OnInit {
 	  ngOnInit() {
 	    
 	   console.log("Working! This is from the API component");
-
 	   this.apiService.getInfo().subscribe(data=>this.showData=data.results; console.log(this.showData));	
 	  }
 

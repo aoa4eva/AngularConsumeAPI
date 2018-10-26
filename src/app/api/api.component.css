@@ -1,5 +1,1 @@
-background{
-	color:black;
-	font:white;
-	font-family:'Arial';
-}
+@import "~bootstrap/dist/css/bootstrap.css";
